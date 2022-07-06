@@ -1,0 +1,1084 @@
+/* Google Font Link */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 78px;
+    background: #003B46;
+    padding: 6px 14px;
+    z-index: 99;
+    transition: all 0.5s ease;
+}
+
+.sidebar.open {
+    width: 250px;
+}
+
+.sidebar .logo-details {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.sidebar .logo-details .icon {
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar .logo-details .logo_name {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name {
+    opacity: 1;
+}
+
+.sidebar .logo-details #btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: all 0.4s ease;
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.sidebar.open .logo-details #btn {
+    text-align: right;
+}
+
+.sidebar i {
+    color: #fff;
+    height: 60px;
+    min-width: 50px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.sidebar .nav-list {
+    margin-top: 20px;
+    height: 100%;
+}
+
+.sidebar li {
+    position: relative;
+    margin: 8px 0;
+    list-style: none;
+}
+
+.sidebar li .tooltip {
+    position: absolute;
+    top: -20px;
+    left: calc(100% + 15px);
+    z-index: 3;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: 0s;
+}
+
+.sidebar li:hover .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sidebar.open li .tooltip {
+    display: none;
+}
+
+.sidebar input {
+    font-size: 15px;
+    color: #FFF;
+    font-weight: 400;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    width: 50px;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+    background: #003B46;
+}
+
+.sidebar.open input {
+    padding: 0 20px 0 50px;
+    width: 100%;
+    background: #085968;
+}
+
+.sidebar .bx-search {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    background: #085968;
+    color: #FFF;
+}
+
+.sidebar.open .bx-search:hover {
+    background: #085968;
+    color: #FFF;
+}
+
+.sidebar .bx-search:hover {
+    background: #FFF;
+    color: #003B46;
+}
+
+.sidebar li a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    background: #003B46;
+}
+
+.sidebar li a:hover {
+    background: #FFF;
+}
+
+.sidebar li a .links_name {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.sidebar.open li a .links_name {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i {
+    transition: all 0.5s ease;
+    color: #003B46;
+}
+
+.sidebar li i {
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+.sidebar li.profile {
+    position: fixed;
+    height: 60px;
+    width: 78px;
+    left: 0;
+    bottom: -8px;
+    padding: 10px 14px;
+    background: #003B46;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+
+.sidebar.open li.profile {
+    width: 250px;
+}
+
+.sidebar li .profile-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.sidebar li img {
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.sidebar li.profile .name,
+.sidebar li.profile .job {
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.sidebar li.profile .job {
+    font-size: 12px;
+}
+
+.sidebar .profile #log_out {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: #003B46;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 0px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.open .profile #log_out {
+    width: 50px;
+    background: none;
+}
+
+.sidebar #log_out:hover {
+    background-color: #085968;
+}
+
+.sidebar.open #log_out:hover {
+    background-color: #085968;
+}
+
+
+/*background: #E4E9F7;*/
+
+.home-section {
+    position: relative;
+    background: #C4DFE6;
+    min-height: 100vh;
+    top: 0;
+    left: 78px;
+    width: calc(100% - 78px);
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.sidebar.open~.home-section {
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+.home-section .text {
+    display: inline-block;
+    color: #003B46;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 18px
+}
+
+.home-section p {
+    display: inline-block;
+    color: #003B46;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: justify;
+    margin: 18px
+}
+
+.page-header {
+    padding-bottom: 50px;
+}
+
+
+/* Start of Dashboard */
+
+.content1 {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 97.6%;
+    height: 394px;
+    margin-left: 18px;
+    margin-bottom: 20px;
+}
+
+
+/* Start of Dropdown Button Content 1 */
+
+.dropbtn {
+    background-color: #3BBA9C;
+    color: white;
+    padding: 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 7px;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    float: right;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    border-radius: 7px;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.dropdown:hover .dropbtn {
+    background-color: #003B46;
+}
+
+.content1 h2 {
+    padding-top: 150px;
+    text-align: center;
+    color: #3BBA9C;
+}
+
+
+/* End of Dropdown Button Content 1 */
+
+.content2 {
+    background-color: #FFF;
+    border-radius: 5px;
+    width: 97.6%;
+    height: 284px;
+    margin-left: 18px;
+}
+
+.content2 h1 {
+    color: #003B46;
+    padding-top: 10px;
+    padding-left: 18px;
+}
+
+.content1 p {
+    margin-bottom: 0%;
+}
+
+.content2 p {
+    margin-bottom: 0%;
+}
+
+
+/* End of Dashboard */
+
+@media (max-width: 420px) {
+    .sidebar li .tooltip {
+        display: none;
+    }
+}
+
+
+/* Start of Data Karyawan */
+
+.add-btn {
+    background-color: #3BBA9C;
+    border: 1 px solid #3BBA9C;
+    border-radius: 7px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    float: right;
+    margin-right: 28px;
+    font-weight: 500;
+    min-width: 140px;
+    min-height: 40px;
+}
+
+.add-btn:hover {
+    background-color: #085968;
+}
+
+form input {
+    margin-left: 18px;
+    padding: 10px;
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid;
+    border-color: #3BBA9C;
+}
+
+form input:hover {
+    border-color: #085968;
+}
+
+hr {
+    margin-top: 50px;
+    margin-bottom: 0px;
+    background-color: #085968;
+    border-color: #085968;
+    border-width: 1px solid;
+}
+
+
+/*
+.column {
+    width: 20%;
+    float: left;
+    margin-left: 18px;
+    margin-top: 22px;
+    padding: 35px 15px;
+    padding-bottom: 100px;
+}
+
+.column .card p {
+    margin-bottom: 0;
+}
+
+.column .title {
+    background-color: #3BBA9C;
+    padding: 3px;
+    border: 1px solid #3BBA9C;
+    border-radius: 3px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.card {
+    margin-top: 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    background-color: white;
+    text-align: center;
+    border-radius: 40px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+.title {
+    color: gray;
+    font-size: 18px;
+}
+*/
+
+.container-profile {
+    max-width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.bx-dots-vertical-rounded {
+    font-size: 26px;
+    margin-left: 380px;
+    text-decoration: none;
+}
+
+.container-profile .box {
+    width: calc(33% - 10px);
+    background: #003B46;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    margin-right: 10px;
+}
+
+.container-profile .box .bx-dots-vertical-rounded {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.container-profile .box .image {
+    margin: 10px 0;
+    height: 150px;
+    width: 150px;
+    background: #3BBA9C;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.box .image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.box .name-profile {
+    margin: 10px 0 3px 0;
+    padding-bottom: 0;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.box .title {
+    background-color: #3BBA9C;
+    padding: 3px;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.box .data {
+    color: #fff;
+}
+
+@media (max-width:1045px) {
+    .container .box {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:710px) {
+    .container .box {
+        width: 100%;
+    }
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+
+.container-profile .box .dropdown-content-action {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    border-radius: 7px;
+    min-width: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+/* Links inside the dropdown */
+
+.dropdown-content-action a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+}
+
+.dropdown-content-action {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    border-radius: 7px;
+    min-width: 40px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content-action a {
+    color: black;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+}
+
+.dropdown-content-action a:hover {
+    background-color: #ddd;
+}
+
+
+/* Show the dropdown menu on hover */
+
+.box .fas {
+    color: white;
+    font-size: 16px;
+    padding-left: 350px;
+}
+
+.box .fas:hover {
+    display: block;
+}
+
+.box .fas:hover .dropdown-content-action {
+    display: block;
+    color: black;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+}
+
+
+/* Start of Edit Karyawan */
+
+.home-section .text .fas {
+    color: #003B46;
+    padding-left: 38px;
+    padding-right: 30px;
+}
+
+.containerTambah {
+    background-color: white;
+    margin-left: 48px;
+    width: 95%;
+}
+
+.wrapper {
+    max-width: 5000px;
+    width: 100%;
+    background: #fff;
+    margin: 20px auto;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+    padding: 30px;
+}
+
+.wrapper .title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #003B46;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.wrapper .form {
+    width: 100%;
+}
+
+.wrapper .form .inputfield {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .form .inputfield label {
+    width: 200px;
+    color: #757575;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea {
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea {
+    width: 100%;
+    height: 125px;
+    resize: none;
+}
+
+.wrapper .form .inputfield .custom_select {
+    position: relative;
+    width: 100%;
+    height: 37px;
+    margin-left: 17px;
+}
+
+.wrapper .form .inputfield .custom_select:before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    border: 8px solid;
+    border-color: #d5dbd9 transparent transparent transparent;
+    pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 1px solid #d5dbd9;
+    border-radius: 3px;
+}
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus {
+    border: 1px solid #003B46;
+}
+
+.wrapper .form .inputfield p {
+    font-size: 14px;
+    color: #757575;
+}
+
+.wrapper .form .inputfield .check {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.wrapper .form .inputfield .check .checkmark {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #003B46;
+    display: block;
+    position: relative;
+}
+
+.wrapper .form .inputfield .check .checkmark:before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 5px;
+    height: 2px;
+    border: 2px solid;
+    border-color: transparent transparent #fff #fff;
+    transform: rotate(-45deg);
+    display: none;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked~.checkmark {
+    background: #003B46;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked~.checkmark:before {
+    display: block;
+}
+
+.wrapper .form .inputfield .btn {
+    width: 100%;
+    margin-left: 0;
+    font-size: 15px;
+    border: 0px;
+    background: #003B46;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover {
+    background: #003B46;
+}
+
+.wrapper .form .inputfield:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width:420px) {
+    .wrapper .form .inputfield {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .wrapper .form .inputfield label {
+        margin-bottom: 5px;
+    }
+    .wrapper .form .inputfield.terms {
+        flex-direction: row;
+    }
+}
+
+
+/* End of Edit Karyawan */
+
+
+/* End of Data Karyawan */
+
+
+/* Start of Alert Success*/
+
+.alertt {
+    margin-left: 0px;
+    padding: 20px;
+    background-color: #3BBA9C;
+    /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+
+
+/* The close button */
+
+.closebtnn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* When moving the mouse over the close button */
+
+.closebtnn:hover {
+    color: black;
+}
+
+
+/* End of Alert Success*/
+
+
+/* Start of Tentang*/
+
+.contentTentang img {
+    margin-top: 15px;
+    margin-left: 45%;
+}
+
+.contentTentang p {
+    font-size: 22px;
+    margin-left: 10%;
+    width: 80%;
+    text-align: center;
+}
+
+
+/* End of Tentang */
+
+
+/* Strat of Data Transaksi */
+
+.dropbtn {
+    background-color: #3BBA9C;
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 7px;
+}
+
+.dropbtnn {
+    background-color: #003B46;
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 7px;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+
+.contentTransaksi .dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    float: right;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+
+.contentTransaksi .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    border-radius: 7px;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+/* Links inside the dropdown */
+
+.contentTransaksi .dropdown-content a {
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Change color of dropdown links on hover */
+
+.contentTransaksi .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+/* Show the dropdown menu on hover */
+
+.contentTransaksi .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.contentTransaksi .dropdown:hover .dropbtn {
+    background-color: #003B46;
+}
+
+.accordion {
+    max-width: 97%;
+    margin-left: 22px;
+    margin-top: 150px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: "Quicksand", sans-serif;
+    background: #3BBA9C;
+}
+
+.accordion__label,
+.accordion__content {
+    padding: 14px 20px;
+}
+
+.accordion__label {
+    display: block;
+    color: #ffffff;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.1s;
+}
+
+.accordion__label:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.accordion__label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    width: 12px;
+    height: 6px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+    background-size: contain;
+    transition: transform 0.4s;
+}
+
+.accordion__content {
+    background: #ffffff;
+    line-height: 1.6;
+    font-size: 0.85em;
+    display: none;
+}
+
+.accordion__input {
+    display: none;
+}
+
+.accordion__input:checked~.accordion__content {
+    display: block;
+}
+
+.accordion__input:checked~.accordion__label::after {
+    transform: translateY(-50%) rotate(0.5turn);
+}
+
+.accordion__content .styled-table thead tr {
+    background-color: #3BBA9C;
+    color: #ffffff;
+    text-align: left;
+}
+
+.accordion__content .styled-table th,
+.accordion__content .styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+#section1 .styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}

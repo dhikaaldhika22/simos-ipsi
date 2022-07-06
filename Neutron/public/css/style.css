@@ -1,0 +1,119 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #C4DFE6;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #003B46;
+    padding-bottom: 20px;
+}
+
+.sistem-informasi {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+
+/* Login */
+
+.form-signin {
+    width: 100%;
+    max-width: 380px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.belum {
+    color: #8F8F8F;
+}
+
+.regist {
+    color: #3BBA9C;
+    text-decoration: none;
+    margin-left: 2px;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+
+
+/* Register */
+
+.form-signup {
+    width: 100%;
+    max-width: 380px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-signup .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signup input[type="nama"] {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.form-signup select[type="employee"] {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.form-signup input[type="no_hp"] {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.form-signup input[type="email"] {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.form-signup input[type="password"] {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.sudah {
+    color: #8F8F8F;
+}
+
+.log {
+    color: #3BBA9C;
+    text-decoration: none;
+    margin-left: 2px;
+}
+
+a:hover {
+    color: #003B46;
+}
